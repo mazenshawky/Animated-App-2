@@ -1,3 +1,4 @@
+import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_app_2/implicit_animations/animated_align_example.dart';
 
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
           physics: const BouncingScrollPhysics(),
           children: [
             myButton("Animated Align Example", const AnimatedAlignExample()),
+            myButton("Animated Container Example", const AnimatedContainerExample()),
           ],
         ),
       ),
