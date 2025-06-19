@@ -14,7 +14,7 @@ class _AnimatedOpacityExampleState extends State<AnimatedOpacityExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Animated Default TextStyle Example'),
+        title: const Text('Animated Opacity Example'),
       ),
       body: Center(
         child: Column(

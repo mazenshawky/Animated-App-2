@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class AnimatedTextSizeExample extends StatefulWidget {
-  const AnimatedTextSizeExample({super.key});
+class AnimatedDefaultTextSizeExample extends StatefulWidget {
+  const AnimatedDefaultTextSizeExample({super.key});
 
   @override
-  State<AnimatedTextSizeExample> createState() =>
-      _AnimatedTextSizeExampleState();
+  State<AnimatedDefaultTextSizeExample> createState() =>
+      _AnimatedDefaultTextSizeExampleState();
 }
 
-class _AnimatedTextSizeExampleState extends State<AnimatedTextSizeExample> {
+class _AnimatedDefaultTextSizeExampleState
+    extends State<AnimatedDefaultTextSizeExample> {
   double _fontSize = 30.0;
   Color _color = Colors.grey;
 
@@ -32,7 +33,8 @@ class _AnimatedTextSizeExampleState extends State<AnimatedTextSizeExample> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(onPressed: _doAnmiation, icon: const Icon(Icons.add)),
-              IconButton(onPressed: _resetAnmiation, icon: const Icon(Icons.remove)),
+              IconButton(
+                  onPressed: _resetAnmiation, icon: const Icon(Icons.remove)),
             ],
           ),
         ],
