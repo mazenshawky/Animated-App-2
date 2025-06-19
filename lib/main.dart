@@ -1,5 +1,6 @@
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_opacity_example.dart';
+import 'package:animated_app_2/implicit_animations/animated_padding_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_text_style_example.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_app_2/implicit_animations/animated_align_example.dart';
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _myButton("Animated Container Example", const AnimatedContainerExample()),
             _myButton("Animated Text Style Example", const AnimatedTextSizeExample()),
             _myButton("Animated Opacity Example", const AnimatedOpacityExample()),
+            _myButton("Animated Padding Example", const AnimatedPaddingExample()),
           ],
         ),
       ),
