@@ -1,4 +1,5 @@
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
+import 'package:animated_app_2/implicit_animations/animated_text_style_example.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_app_2/implicit_animations/animated_align_example.dart';
 
@@ -36,15 +37,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
-            myButton("Animated Align Example", const AnimatedAlignExample()),
-            myButton("Animated Container Example", const AnimatedContainerExample()),
+            _myButton("Animated Align Example", const AnimatedAlignExample()),
+            _myButton("Animated Container Example", const AnimatedContainerExample()),
+            _myButton("Animated Text Style Example", const AnimatedTextSizeExample()),
           ],
         ),
       ),
     );
   }
 
-  Widget myButton(String text, Widget screen) {
+  Widget _myButton(String text, Widget screen) {
     return ElevatedButton(
       onPressed: () {
         Navigator.push(
