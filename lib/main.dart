@@ -1,5 +1,6 @@
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_crossfade_example.dart';
+import 'package:animated_app_2/implicit_animations/animated_list_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_opacity_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_padding_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_physical_model_example.dart';
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _myButton("Animated Positioned Directional Example", const AnimatedPositionedDirectionalExample()),
             _myButton("Animated Crossfade Example", const AnimatedCrossFadeExample()),
             _myButton("Animated Switcher Example", const AnimatedSwitcherExample()),
+            _myButton("Animated List Example", const AnimatedListExample()),
           ],
         ),
       ),
