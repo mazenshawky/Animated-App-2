@@ -2,6 +2,7 @@ import 'package:animated_app_2/implicit_animations/animated_container_example.da
 import 'package:animated_app_2/implicit_animations/animated_opacity_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_padding_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_physical_model_example.dart';
+import 'package:animated_app_2/implicit_animations/animated_positioned_directional_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_positioned_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_text_style_example.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _myButton("Animated Padding Example", const AnimatedPaddingExample()),
             _myButton("Animated Physical Model Example", const AnimatedPhysicalModelExample()),
             _myButton("Animated Positioned Example", const AnimatedPositionedExample()),
+            _myButton("Animated Positioned Directional Example", const AnimatedPositionedDirectionalExample()),
           ],
         ),
       ),
