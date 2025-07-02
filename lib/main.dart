@@ -1,3 +1,4 @@
+import 'package:animated_app_2/explicit_animations/positioned_transistion_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_crossfade_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_list_example.dart';
@@ -56,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _myButton("Animated Crossfade Example", const AnimatedCrossFadeExample()),
             _myButton("Animated Switcher Example", const AnimatedSwitcherExample()),
             _myButton("Animated List Example", const AnimatedListExample()),
+            _myButton("Positioned Transistion Example", const PositionedTransistionExample()),
           ],
         ),
       ),
