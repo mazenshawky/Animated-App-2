@@ -1,4 +1,5 @@
 import 'package:animated_app_2/explicit_animations/positioned_transition_example.dart';
+import 'package:animated_app_2/explicit_animations/rotation_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/size_transition_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_crossfade_example.dart';
@@ -74,6 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 const PositionedTransitionExample(),
                 AnimationType.fooTransition),
             _myButton("Size Transition Example", const SizeTransitionExample(),
+                AnimationType.fooTransition),
+            _myButton("Rotation Transition Example", const RotationTransitionExample(),
                 AnimationType.fooTransition),
           ],
         ),
