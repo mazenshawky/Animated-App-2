@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class PositionedTransistionExample extends StatefulWidget {
-  const PositionedTransistionExample({super.key});
+class PositionedTransitionExample extends StatefulWidget {
+  const PositionedTransitionExample({super.key});
 
   @override
-  State<PositionedTransistionExample> createState() =>
-      _PositionedTransistionExampleState();
+  State<PositionedTransitionExample> createState() =>
+      _PositionedTransitionExampleState();
 }
 
-class _PositionedTransistionExampleState
-    extends State<PositionedTransistionExample>
+class _PositionedTransitionExampleState
+    extends State<PositionedTransitionExample>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<RelativeRect> _jerryAnimation;
@@ -53,7 +53,7 @@ class _PositionedTransistionExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Positioned Transistion Example'),
+        title: const Text('Positioned Transition Example'),
       ),
       body: Stack(
         children: [
