@@ -1,5 +1,6 @@
 import 'package:animated_app_2/explicit_animations/animated_builder_example.dart';
 import 'package:animated_app_2/explicit_animations/animated_builder_with_positioned_directional_example.dart';
+import 'package:animated_app_2/explicit_animations/default_text_style_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/fade_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/positioned_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/rotation_transition_example.dart';
@@ -93,6 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
             _myButton(
                 "Tween Animation Builder Example",
                 const TweenAnimationBuilderExample(),
+                AnimationType.fooTransition),
+            _myButton(
+                "Default Text Style Transition Example",
+                const DefaultTextStyleTransitionExample(),
                 AnimationType.fooTransition),
           ],
         ),
