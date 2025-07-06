@@ -4,6 +4,7 @@ import 'package:animated_app_2/explicit_animations/fade_transition_example.dart'
 import 'package:animated_app_2/explicit_animations/positioned_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/rotation_transition_example.dart';
 import 'package:animated_app_2/explicit_animations/size_transition_example.dart';
+import 'package:animated_app_2/explicit_animations/tween_animation_builder_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_container_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_crossfade_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_list_example.dart';
@@ -79,13 +80,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 AnimationType.fooTransition),
             _myButton("Size Transition Example", const SizeTransitionExample(),
                 AnimationType.fooTransition),
-            _myButton("Rotation Transition Example", const RotationTransitionExample(),
-                AnimationType.fooTransition),
-            _myButton("Animated Builder Example", const AnimatedBuilderExample(),
-                AnimationType.fooTransition),
+            _myButton("Rotation Transition Example",
+                const RotationTransitionExample(), AnimationType.fooTransition),
+            _myButton("Animated Builder Example",
+                const AnimatedBuilderExample(), AnimationType.fooTransition),
             _myButton("Fade Transition Example", const FadeTransitionExample(),
                 AnimationType.fooTransition),
-            _myButton("Animated Builder with Positioned Directional Example", const AnimatedBuilderWithPositionedDirectionalExample(),
+            _myButton(
+                "Animated Builder with Positioned Directional Example",
+                const AnimatedBuilderWithPositionedDirectionalExample(),
+                AnimationType.fooTransition),
+            _myButton(
+                "Tween Animation Builder Example",
+                const TweenAnimationBuilderExample(),
                 AnimationType.fooTransition),
           ],
         ),
