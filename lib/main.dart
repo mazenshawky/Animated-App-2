@@ -20,6 +20,7 @@ import 'package:animated_app_2/implicit_animations/animated_text_style_example.d
 import 'package:animated_app_2/page_transitions/page_fade_transition.dart';
 import 'package:animated_app_2/page_transitions/page_rotate_transition.dart';
 import 'package:animated_app_2/page_transitions/page_scale_transition.dart';
+import 'package:animated_app_2/page_transitions/page_slide_transition.dart';
 import 'package:animated_app_2/page_transitions/page_two.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_app_2/implicit_animations/animated_align_example.dart';
@@ -139,6 +140,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text(
                 "Page Rotate Transition",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              onPressed: () {
+                Navigator.of(context).push(PageSlideTransition(const PageTwo()));
+              },
+              child: const Text(
+                "Page Slide Transition",
                 style: TextStyle(color: Colors.white),
               ),
             ),
