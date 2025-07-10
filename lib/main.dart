@@ -18,6 +18,7 @@ import 'package:animated_app_2/implicit_animations/animated_positioned_example.d
 import 'package:animated_app_2/implicit_animations/animated_switcher_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_text_style_example.dart';
 import 'package:animated_app_2/page_transitions/page_fade_transition.dart';
+import 'package:animated_app_2/page_transitions/page_mix_size_fade_transition.dart';
 import 'package:animated_app_2/page_transitions/page_rotate_transition.dart';
 import 'package:animated_app_2/page_transitions/page_scale_transition.dart';
 import 'package:animated_app_2/page_transitions/page_size_transition.dart';
@@ -161,6 +162,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text(
                 "Page Size Transition",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              onPressed: () {
+                Navigator.of(context).push(PageMixSizeFadeTransition(const PageTwo()));
+              },
+              child: const Text(
+                "Page Mix Size Fade Transition",
                 style: TextStyle(color: Colors.white),
               ),
             ),
