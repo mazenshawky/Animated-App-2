@@ -17,6 +17,7 @@ import 'package:animated_app_2/implicit_animations/animated_positioned_direction
 import 'package:animated_app_2/implicit_animations/animated_positioned_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_switcher_example.dart';
 import 'package:animated_app_2/implicit_animations/animated_text_style_example.dart';
+import 'package:animated_app_2/other_animations/custom_painter_example.dart';
 import 'package:animated_app_2/page_transitions/page_fade_transition.dart';
 import 'package:animated_app_2/page_transitions/page_mix_scale_rotate_transition.dart';
 import 'package:animated_app_2/page_transitions/page_mix_size_fade_transition.dart';
@@ -28,7 +29,7 @@ import 'package:animated_app_2/page_transitions/page_two.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_app_2/implicit_animations/animated_align_example.dart';
 
-enum AnimationType { animtedFoo, fooTransition }
+enum AnimationType { animtedFoo, fooTransition, other }
 
 void main() {
   runApp(const MyApp());
@@ -117,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const IndexedStackTransitionExample(),
                 AnimationType.fooTransition),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
                 Navigator.of(context).push(PageFadeTransition(const PageTwo()));
               },
@@ -127,9 +128,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
-                Navigator.of(context).push(PageScaleTransition(const PageTwo()));
+                Navigator.of(context)
+                    .push(PageScaleTransition(const PageTwo()));
               },
               child: const Text(
                 "Page Scale Transition",
@@ -137,9 +139,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
-                Navigator.of(context).push(PageRotateTransition(const PageTwo()));
+                Navigator.of(context)
+                    .push(PageRotateTransition(const PageTwo()));
               },
               child: const Text(
                 "Page Rotate Transition",
@@ -147,9 +150,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
-                Navigator.of(context).push(PageSlideTransition(const PageTwo()));
+                Navigator.of(context)
+                    .push(PageSlideTransition(const PageTwo()));
               },
               child: const Text(
                 "Page Slide Transition",
@@ -157,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
                 Navigator.of(context).push(PageSizeTransition(const PageTwo()));
               },
@@ -167,9 +171,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
-                Navigator.of(context).push(PageMixSizeFadeTransition(const PageTwo()));
+                Navigator.of(context)
+                    .push(PageMixSizeFadeTransition(const PageTwo()));
               },
               child: const Text(
                 "Page Mix Size Fade Transition",
@@ -177,14 +182,20 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red[300]),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple[300]),
               onPressed: () {
-                Navigator.of(context).push(PageMixScaleRotateTransition(const PageTwo()));
+                Navigator.of(context)
+                    .push(PageMixScaleRotateTransition(const PageTwo()));
               },
               child: const Text(
                 "Page Mix Scale Rotate Transition",
                 style: TextStyle(color: Colors.white),
               ),
+            ),
+            _myButton(
+              'Custom Painter Example',
+              const CustomPainterExample(),
+              AnimationType.other,
             ),
           ],
         ),
@@ -197,7 +208,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return ElevatedButton(
       style: animationType == AnimationType.animtedFoo
           ? null
-          : ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple[100]),
+          : animationType == AnimationType.fooTransition
+              ? ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple[100])
+              : ElevatedButton.styleFrom(backgroundColor: Colors.purple[100]),
       onPressed: () {
         Navigator.push(
           context,
